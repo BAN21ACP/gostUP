@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5d548d0c-a4dd-4155-a0a4-e430acd2831e">
+  <producedTypes>
+    <objectType typeId="66a26b26-bd7a-4420-84a5-bda0623a9f0b" valueTypeId="31ce54c8-1f16-4510-aa39-03be040e81d3"/>
+    <refType typeId="f48f5a50-e6fe-4bd8-912e-b5b2d20423f1" valueTypeId="e14e47c2-2566-468c-877f-c6debc1e8616"/>
+    <selectionType typeId="c4999c8b-4653-4a25-a19c-548cb0929e38" valueTypeId="06c1b95c-7480-400c-a4f6-2e14d90f5305"/>
+    <listType typeId="b4b22cd9-9ca3-4fc6-aabb-5af861ef1224" valueTypeId="2c3d9d4d-1296-4269-81c1-2933f20addd4"/>
+    <managerType typeId="9d778682-2671-46b6-9992-3555f9741355" valueTypeId="c0af5493-1597-4a8b-a7b0-ddc99ebafee2"/>
+  </producedTypes>
+  <name>КлассыКлиентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Классы клиентов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.КлассыКлиентов.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.КлассыКлиентов.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

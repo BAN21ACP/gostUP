@@ -43,6 +43,7 @@
   <catalogs>Catalog.КлассыНомеров</catalogs>
   <catalogs>Catalog.Клиенты</catalogs>
   <catalogs>Catalog.Контрагенты</catalogs>
+  <catalogs>Catalog.КлассыКлиентов</catalogs>
   <documents>Document.Бронирование</documents>
   <documents>Document.СнятиеБрони</documents>
   <documents>Document.РазмещениеГостя</documents>
