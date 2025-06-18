@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Клиент</dataPath>
+			<field>Клиент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачала</dataPath>
+			<field>ДатаНачала</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерОтеля</dataPath>
+			<field>НомерОтеля</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончания</dataPath>
+			<field>ДатаОкончания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьПроживания</dataPath>
+			<field>СтоимостьПроживания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость проживания</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Заселение.Клиент КАК Клиент,
+	Заселение.НомерОтеля КАК НомерОтеля,
+	Заселение.ДатаНачала КАК ДатаНачала,
+	Заселение.ДатаОкончания КАК ДатаОкончания,
+	Заселение.СтоимостьПроживанияСоСкидкой КАК СтоимостьПроживания,
+	ЕСТЬNULL(Возвраты.ДатаОкончания, ДАТАВРЕМЯ(1, 1, 1)) КАК ДатаОкончанияВозврат,
+	ЕСТЬNULL(Возвраты.СтоимостьПроживанияСоСкидкой, 0) КАК СтоимостьПроживанияВозврат
+ПОМЕСТИТЬ ТабЗн
+ИЗ
+	(ВЫБРАТЬ
+		РазмещениеГостя.Клиент КАК Клиент,
+		РазмещениеГостя.НомерОтеля КАК НомерОтеля,
+		РазмещениеГостя.ДатаНачала КАК ДатаНачала,
+		РазмещениеГостя.ДатаОкончания КАК ДатаОкончания,
+		РазмещениеГостя.СтоимостьПроживанияСоСкидкой КАК СтоимостьПроживанияСоСкидкой
+	ИЗ
+		Документ.РазмещениеГостя КАК РазмещениеГостя
+	ГДЕ
+		РазмещениеГостя.ДатаНачала &gt;= &amp;ДатаНачала
+		И РазмещениеГостя.ДатаОкончания &lt;= &amp;ДатаОкончания
+		И РазмещениеГостя.Проведен) КАК Заселение
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВыбытиеГостя.Клиент КАК Клиент,
+			ВыбытиеГостя.НомерОтеля КАК НомерОтеля,
+			ВыбытиеГостя.ДатаНачала КАК ДатаНачала,
+			ВыбытиеГостя.ДатаОкончания КАК ДатаОкончания,
+			ВыбытиеГостя.СтоимостьПроживанияСоСкидкой КАК СтоимостьПроживанияСоСкидкой
+		ИЗ
+			Документ.ВыбытиеГостя КАК ВыбытиеГостя
+		ГДЕ
+			ВыбытиеГостя.Проведен
+			И ВыбытиеГостя.ДатаНачала &gt;= &amp;ДатаНачала
+			И ВыбытиеГостя.ДатаОкончания &lt;= &amp;ДатаОкончания) КАК Возвраты
+		ПО Заселение.Клиент = Возвраты.Клиент
+			И Заселение.НомерОтеля = Возвраты.НомерОтеля
+			И Заселение.ДатаНачала = Возвраты.ДатаНачала
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТабЗн.Клиент КАК Клиент,
+	ТабЗн.НомерОтеля КАК НомерОтеля,
+	ТабЗн.ДатаНачала КАК ДатаНачала,
+	ВЫБОР
+		КОГДА ТабЗн.ДатаОкончанияВозврат = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ТабЗн.ДатаОкончания
+		ИНАЧЕ ТабЗн.ДатаОкончанияВозврат
+	КОНЕЦ КАК ДатаОкончания,
+	ВЫБОР
+		КОГДА ТабЗн.ДатаОкончанияВозврат = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ТабЗн.СтоимостьПроживания
+		ИНАЧЕ ТабЗн.СтоимостьПроживанияВозврат
+	КОНЕЦ КАК СтоимостьПроживания
+ИЗ
+	ТабЗн КАК ТабЗн</query>
+	</dataSet>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерОтеля</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Клиент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаНачала</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОкончания</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтоимостьПроживания</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаНачала</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>bb687172-06c9-436c-9588-bab24d8e6d40</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаОкончания</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextWeek</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>ba5d3d4e-9fef-41ca-81f1-27fb7b167dad</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

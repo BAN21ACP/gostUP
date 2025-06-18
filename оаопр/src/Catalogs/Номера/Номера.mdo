@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="12623212-a2a0-4c55-addd-a0f94849dca5">
+  <producedTypes>
+    <objectType typeId="427e357f-ffe7-4d2d-bb32-8b536abb70d0" valueTypeId="b7af34fc-308d-49f8-8019-66d0bcb811f8"/>
+    <refType typeId="17325d08-039f-46d2-b5e4-17264dcdc499" valueTypeId="c30d77a6-6215-4aba-b2a1-4b06936a7b63"/>
+    <selectionType typeId="a29e66c9-81f7-423b-b1dc-74c658189755" valueTypeId="71ee2457-48d0-42ed-a7a7-6ff6e10cde01"/>
+    <listType typeId="1f4447b6-0d10-40f0-9650-d1769cee038c" valueTypeId="6a2c5c1d-a818-4fa4-a7fc-e94063c212ee"/>
+    <managerType typeId="331b9de5-af3c-44e2-9766-0a57af0b6459" valueTypeId="b907863b-9536-42ea-9e2b-08ac150f91d2"/>
+  </producedTypes>
+  <name>Номера</name>
+  <synonym>
+    <key>ru</key>
+    <value>Номера</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Номера.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Номера.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>3</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.Номера.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultChoiceForm>Catalog.Номера.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="c42063f9-e875-438a-aab1-5641cfd4f1bf">
+    <name>КоличествоМест</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество мест</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3afac0b3-77cf-484c-a734-afe938ef8e0c">
+    <name>КлассНомера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Класс номера</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлассыНомеров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="6d1ba36b-b886-4608-b7cd-5ecca57eb88a">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a4204109-75be-4621-8fb6-2636084379fb">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

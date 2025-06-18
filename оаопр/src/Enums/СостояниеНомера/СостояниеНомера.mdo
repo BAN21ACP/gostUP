@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="66d8f0a4-e546-41e3-86c1-856dfb22147e">
+  <producedTypes>
+    <refType typeId="e0bed855-c112-49f4-822e-cfbd6a77b27a" valueTypeId="bf21d816-02a9-4e41-9be1-6487da74b147"/>
+    <listType typeId="6a8f3458-d973-42a2-a773-8badad12efc0" valueTypeId="277982ab-6a90-4d1c-92c6-385c8421254a"/>
+    <managerType typeId="a715adf5-6586-4c60-b9ec-9d0b1c4dc1e1" valueTypeId="03d9f966-e98d-4acb-ad5e-f5172b47f31a"/>
+  </producedTypes>
+  <name>СостояниеНомера</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние номера</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="c3a2903b-8227-42e7-8a8f-7f4378d1d244">
+    <name>Свободен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Свободен</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="6d9b51ae-fce3-47f4-bb97-464c49dda2bf">
+    <name>Занят</name>
+    <synonym>
+      <key>ru</key>
+      <value>Занят</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="221e9c33-2e5b-43e1-8cde-800b9fa3e4d7">
+    <name>Бронь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бронь</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

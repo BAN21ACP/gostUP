@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmi:CommandInterface xmlns:cmi="http://g5.1c.ru/v8/dt/cmi">
+  <commandsOrder>
+    <orderFragments>
+      <group>NavigationPanelOrdinary</group>
+      <commands>Document.Бронирование.StandardCommand.OpenList</commands>
+      <commands>Document.РазмещениеГостя.StandardCommand.OpenList</commands>
+      <commands>AccumulationRegister.Оплаты.StandardCommand.OpenList</commands>
+      <commands>Document.СнятиеБрони.StandardCommand.OpenList</commands>
+      <commands>Document.ВыбытиеГостя.StandardCommand.OpenList</commands>
+      <commands>Document.Счет.StandardCommand.OpenList</commands>
+      <commands>Document.СчетНаВозврат.StandardCommand.OpenList</commands>
+    </orderFragments>
+    <orderFragments>
+      <group>ActionsPanelCreate</group>
+      <commands>Document.Бронирование.StandardCommand.Create</commands>
+      <commands>Document.РазмещениеГостя.StandardCommand.Create</commands>
+      <commands>Document.СнятиеБрони.StandardCommand.Create</commands>
+      <commands>Document.ВыбытиеГостя.StandardCommand.Create</commands>
+      <commands>Document.СчетНаВозврат.StandardCommand.Create</commands>
+      <commands>Document.Счет.StandardCommand.Create</commands>
+    </orderFragments>
+  </commandsOrder>
+</cmi:CommandInterface>

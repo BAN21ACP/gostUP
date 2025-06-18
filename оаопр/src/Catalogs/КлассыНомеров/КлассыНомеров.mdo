@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="03585800-d21d-49e6-8e1b-79fe448c64a3">
+  <producedTypes>
+    <objectType typeId="aa8b5834-e31e-476d-94fc-bd5c8428e852" valueTypeId="890ef79d-6216-4d21-a96e-6141f790faf0"/>
+    <refType typeId="5e8d9b7c-2b47-47e2-9987-c10cf58dce19" valueTypeId="48ada701-216e-4bcb-b5f0-461d1a50906b"/>
+    <selectionType typeId="76e557f2-b02f-41e8-af22-877ba117c58c" valueTypeId="34d803a5-d326-495c-817a-bb12b7886cfe"/>
+    <listType typeId="b763e6e9-ee06-4b45-8f84-c2c858d891bf" valueTypeId="ff189ab0-d491-4137-9d50-1bb707698b0f"/>
+    <managerType typeId="94896f78-2b99-4e4e-9435-06751c55c43f" valueTypeId="791663c0-48ba-42f5-8c87-7fa15a55a360"/>
+  </producedTypes>
+  <name>КлассыНомеров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Классы номеров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.КлассыНомеров.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.КлассыНомеров.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>
