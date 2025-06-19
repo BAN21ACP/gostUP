@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="54069f5b-a1ec-457b-aeb6-76907fc13025">
+  <producedTypes>
+    <objectType typeId="2b809348-5677-4eba-bd35-966ab3772892" valueTypeId="3aead4a7-0392-49b9-af9f-b3676d6f16fc"/>
+    <refType typeId="d69cfbc6-ab1c-4ddc-8061-d9206b651e88" valueTypeId="4e5be708-66c1-4fe7-93a2-f58ce8c66382"/>
+    <selectionType typeId="e1f8e7a8-2efb-479d-8056-3656e631a98b" valueTypeId="01542777-d1a0-40c6-8651-332d91bf3474"/>
+    <listType typeId="c5d60db8-44c8-462d-897f-09f6d4a0557d" valueTypeId="bdaa34b2-5c0f-4e0e-b84f-b2c4961c40ba"/>
+    <managerType typeId="fda5b2b8-f11e-4c6d-89d3-80388c7e5a10" valueTypeId="9294964d-7083-4acf-8f26-fa7bcefba4d2"/>
+  </producedTypes>
+  <name>Cправ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Cправ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Cправ.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.Cправ.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>
