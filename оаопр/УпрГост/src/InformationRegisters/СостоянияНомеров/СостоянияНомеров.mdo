@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="45e5e4a7-8d52-4823-8621-4d67915b020c">
+  <producedTypes>
+    <selectionType typeId="25936c82-369d-434f-88b1-e17f6c95bd30" valueTypeId="f5c734e9-13ca-408d-b8eb-5faa752e7e1e"/>
+    <listType typeId="c3b54b0f-972a-43f9-b698-39a0de082ddd" valueTypeId="b3696853-3c9f-4b90-a2e4-91b2916ffc8e"/>
+    <managerType typeId="8bd891f1-20ff-47a5-a955-21769bf164e9" valueTypeId="f2f06f76-7817-4c83-8b21-afb807622230"/>
+    <recordSetType typeId="aabd7b88-65f5-4f6b-8209-0983a47ef3f9" valueTypeId="7a6e7ee6-0d90-4e7f-8695-fa0867e3f644"/>
+    <recordKeyType typeId="6325dd86-f96c-4019-b58a-2f527a1f7eff" valueTypeId="74db8e11-70d9-4abd-b816-697b19e6ec40"/>
+    <recordType typeId="5fb8677e-a2e5-40c5-bf1f-e4caaf50179a" valueTypeId="dd006d13-2e73-4e9b-b6b5-525b1d99cc1c"/>
+    <recordManagerType typeId="7b39336c-59c6-4ff3-9a2d-74662f2b750f" valueTypeId="9d3b66df-8482-4a43-b63c-65447b60f9c0"/>
+  </producedTypes>
+  <name>СостоянияНомеров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояния номеров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.СостоянияНомеров.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="dc93e307-8c9f-4cff-9b8e-b0d2dace8a2b">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостояниеНомера</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="35321c4d-b1f6-4fe0-a28e-5c760e92acf3">
+    <name>КоличествоМест</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество мест</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="db4a7fe9-c089-4574-8a64-453e2dd97b23">
+    <name>НомерОтеля</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер отеля</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номера</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="922e6fed-d5a2-4e63-9b71-68dc1d4669bf">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="e8b42b38-5b97-4466-8226-a03a59b0ed88">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

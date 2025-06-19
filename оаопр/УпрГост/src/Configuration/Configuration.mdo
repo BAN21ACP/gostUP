@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cc3a7d5d-acee-47d9-85d5-173a27ac3c70">
+  <name>Конфигурация</name>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="6ef8f382-3762-4390-bf2f-64db45255872"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="a7e12807-6afb-44e9-8b4b-fb5fbe82277e"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="a422cdc4-4a37-42dd-9139-5dce7b2b8437"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="3c0a90c3-8328-45d2-b185-addc60d4417e"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="4c78db00-4273-43f0-a525-6ea25890b26b"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="2e58a706-d138-40e7-92bc-64ccc24036fa"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="38fd6508-1f86-4ea9-bf8c-e71e5bb05d56"/>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>PersonalComputer</usePurposes>
+  <scriptVariant>Russian</scriptVariant>
+  <usedMobileApplicationFunctionalities>
+    <functionality>
+      <use>true</use>
+    </functionality>
+    <functionality>
+      <functionality>OSBackup</functionality>
+      <use>true</use>
+    </functionality>
+  </usedMobileApplicationFunctionalities>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
+  <modalityUseMode>DontUse</modalityUseMode>
+  <synchronousPlatformExtensionAndAddInCallUseMode>DontUse</synchronousPlatformExtensionAndAddInCallUseMode>
+  <compatibilityMode>8.3.17</compatibilityMode>
+  <languages uuid="29b1bc0a-04f3-4024-a0c4-cabc26adfb23">
+    <name>Русский</name>
+    <synonym>
+      <key>ru</key>
+      <value>Русский</value>
+    </synonym>
+    <languageCode>ru</languageCode>
+  </languages>
+  <subsystems>Subsystem.Справочники</subsystems>
+  <subsystems>Subsystem.Документы</subsystems>
+  <subsystems>Subsystem.Отчеты</subsystems>
+  <constants>Constant.НаименованиеОрганизации</constants>
+  <catalogs>Catalog.Номера</catalogs>
+  <catalogs>Catalog.КлассыНомеров</catalogs>
+  <catalogs>Catalog.Клиенты</catalogs>
+  <catalogs>Catalog.Контрагенты</catalogs>
+  <documents>Document.Бронирование</documents>
+  <documents>Document.СнятиеБрони</documents>
+  <documents>Document.РазмещениеГостя</documents>
+  <documents>Document.Счет</documents>
+  <documents>Document.ВыбытиеГостя</documents>
+  <documents>Document.СчетНаВозврат</documents>
+  <enums>Enum.СостояниеНомера</enums>
+  <reports>Report.ОтчетОЗанятыхНомерах</reports>
+  <reports>Report.Оплаты</reports>
+  <reports>Report.ОтчетОПроживающих</reports>
+  <dataProcessors>DataProcessor.ГрупповоеИзменениеРеквизитов</dataProcessors>
+  <informationRegisters>InformationRegister.СостоянияНомеров</informationRegisters>
+  <informationRegisters>InformationRegister.ЦенаСуточногоПроживания</informationRegisters>
+  <accumulationRegisters>AccumulationRegister.Оплаты</accumulationRegisters>
+</mdclass:Configuration>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e5471393-65b9-4d80-91b2-0afb64687cec">
+  <producedTypes>
+    <objectType typeId="3d0bbc40-9687-4083-a937-0096aa5bd672" valueTypeId="7564d1c5-6da5-43a8-8dcd-a4174dd98057"/>
+    <managerType typeId="de01cd3e-e05f-40bf-961a-9282dddae31e" valueTypeId="5b702710-fd27-4fc6-8e56-d82836b02ef6"/>
+  </producedTypes>
+  <name>ОтчетОЗанятыхНомерах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отчет о занятых номерах</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ОтчетОЗанятыхНомерах.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="223fb65d-7996-4db7-9267-f1fc7cc9a09f">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>
